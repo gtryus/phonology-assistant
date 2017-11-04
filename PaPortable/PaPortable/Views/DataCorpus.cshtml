@@ -1,20 +1,27 @@
 ﻿@model List<LipEntry>
 <html>
-	<head><link rel="stylesheet" href="style.css" /></head>
+	<head>
+    <link rel="stylesheet" href="bootstrap.css" />
+    <title>Phonlogy Assistant Portable</title>
+    </head>
 <body>
-    <h1>Data Corpus</h1>
-    <table>
-        <thead><tr><th>Phonetic</th><th>Gloss</th><th>POS</th><th>CV Pattern</th><th>Reference</th></tr></thead>
-        @foreach (var entry in @Model)
-        {
-            <tr>
-                <td>@entry.phonetic</td>
-                <td>@entry.gloss</td>
-                <td>@entry.pos</td>
-                <td>@entry.cvPat</td>
-                <td>@entry.myRef</td>
-            </tr>
-        }
-    </table>
+    <div class="container body-content">
+        <h1>Data Corpus</h1>
+        <table class="table table-hover table-striped table-bordered">
+            <thead><tr><th>Phonetic</th><th>Gloss</th><th>POS</th><th>CV Pattern</th><th>Reference</th></tr></thead>
+            @foreach (var entry in @Model)
+            {
+                <tr>
+                    <td>@entry.phonetic</td>
+                    <td>@entry.gloss</td>
+                    <td>@entry.pos</td>
+                    <td>@entry.cvPat</td>
+                    <td>@entry.myRef</td>
+                </tr>
+            }
+        </table>
+    </div>
+    <script type="text/javascript" src="jquery-1.9.1.js"></script>
+    <script type="text/javascript" src="bootstrap.js"></script>
 </body>
 </html>

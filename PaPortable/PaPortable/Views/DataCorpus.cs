@@ -17,7 +17,7 @@ using System.Linq;
 using System.Text;
 
 
-[System.CodeDom.Compiler.GeneratedCodeAttribute("RazorTemplatePreprocessor", "4.7.10.33")]
+[System.CodeDom.Compiler.GeneratedCodeAttribute("RazorTemplatePreprocessor", "4.7.10.22")]
 public partial class DataCorpus : DataCorpusBase
 {
 
@@ -32,85 +32,105 @@ public List<LipEntry> Model { get; set; }
 
 public override void Execute()
 {
-WriteLiteral("<html>\r\n\t<head><link");
+WriteLiteral("<html>\r\n\t<head>\r\n    <link");
 
 WriteLiteral(" rel=\"stylesheet\"");
 
-WriteLiteral(" href=\"style.css\"");
+WriteLiteral(" href=\"bootstrap.css\"");
 
-WriteLiteral(" /></head>\r\n<body>\r\n    <h1>Data Corpus</h1>\r\n    <table>\r\n        <thead><tr><th" +
-">Phonetic</th><th>Gloss</th><th>POS</th><th>CV Pattern</th><th>Reference</th></t" +
-"r></thead>\r\n");
+WriteLiteral(" />\r\n    <title>Phonlogy Assistant Portable</title>\r\n    </head>\r\n<body>\r\n    <di" +
+"v");
 
+WriteLiteral(" class=\"container body-content\"");
 
-#line 8 "DataCorpus.cshtml"
-        
+WriteLiteral(">\r\n        <h1>Data Corpus</h1>\r\n        <table");
 
-#line default
-#line hidden
+WriteLiteral(" class=\"table table-hover table-striped table-bordered\"");
 
-#line 8 "DataCorpus.cshtml"
-         foreach (var entry in @Model)
-        {
-
-
-#line default
-#line hidden
-WriteLiteral("            <tr>\r\n                <td>");
-
-
-#line 11 "DataCorpus.cshtml"
-               Write(entry.phonetic);
-
-
-#line default
-#line hidden
-WriteLiteral("</td>\r\n                <td>");
+WriteLiteral(">\r\n            <thead><tr><th>Phonetic</th><th>Gloss</th><th>POS</th><th>CV Patte" +
+"rn</th><th>Reference</th></tr></thead>\r\n");
 
 
 #line 12 "DataCorpus.cshtml"
-               Write(entry.gloss);
+            
+
+#line default
+#line hidden
+
+#line 12 "DataCorpus.cshtml"
+             foreach (var entry in @Model)
+            {
 
 
 #line default
 #line hidden
-WriteLiteral("</td>\r\n                <td>");
-
-
-#line 13 "DataCorpus.cshtml"
-               Write(entry.pos);
-
-
-#line default
-#line hidden
-WriteLiteral("</td>\r\n                <td>");
-
-
-#line 14 "DataCorpus.cshtml"
-               Write(entry.cvPat);
-
-
-#line default
-#line hidden
-WriteLiteral("</td>\r\n                <td>");
+WriteLiteral("                <tr>\r\n                    <td>");
 
 
 #line 15 "DataCorpus.cshtml"
-               Write(entry.myRef);
+                   Write(entry.phonetic);
 
 
 #line default
 #line hidden
-WriteLiteral("</td>\r\n            </tr>\r\n");
+WriteLiteral("</td>\r\n                    <td>");
+
+
+#line 16 "DataCorpus.cshtml"
+                   Write(entry.gloss);
+
+
+#line default
+#line hidden
+WriteLiteral("</td>\r\n                    <td>");
 
 
 #line 17 "DataCorpus.cshtml"
-        }
+                   Write(entry.pos);
 
 
 #line default
 #line hidden
-WriteLiteral("    </table>\r\n</body>\r\n</html>");
+WriteLiteral("</td>\r\n                    <td>");
+
+
+#line 18 "DataCorpus.cshtml"
+                   Write(entry.cvPat);
+
+
+#line default
+#line hidden
+WriteLiteral("</td>\r\n                    <td>");
+
+
+#line 19 "DataCorpus.cshtml"
+                   Write(entry.myRef);
+
+
+#line default
+#line hidden
+WriteLiteral("</td>\r\n                </tr>\r\n");
+
+
+#line 21 "DataCorpus.cshtml"
+            }
+
+
+#line default
+#line hidden
+WriteLiteral("        </table>\r\n    </div>\r\n    <script");
+
+WriteLiteral(" type=\"text/javascript\"");
+
+WriteLiteral(" src=\"jquery-1.9.1.js\"");
+
+WriteLiteral("></script>\r\n    <script");
+
+WriteLiteral(" type=\"text/javascript\"");
+
+WriteLiteral(" src=\"bootstrap.js\"");
+
+WriteLiteral("></script>\r\n</body>\r\n</html>");
 
 }
 }
