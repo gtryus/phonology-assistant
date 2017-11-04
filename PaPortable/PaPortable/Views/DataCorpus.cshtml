@@ -1,0 +1,20 @@
+﻿@model List<LipEntry>
+<html>
+	<head><link rel="stylesheet" href="style.css" /></head>
+<body>
+    <h1>Data Corpus</h1>
+    <table>
+        <thead><tr><th>Phonetic</th><th>Gloss</th><th>POS</th><th>CV Pattern</th><th>Reference</th></tr></thead>
+        @foreach (var entry in @Model)
+        {
+            <tr>
+                <td>@entry.phonetic</td>
+                <td>@entry.gloss</td>
+                <td>@entry.pos</td>
+                <td>@entry.cvPat</td>
+                <td>@entry.myRef</td>
+            </tr>
+        }
+    </table>
+</body>
+</html>

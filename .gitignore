@@ -21,3 +21,11 @@ packages/*
 TestResult.xml
 PaTests.VisualState.xml
 .vs/
+PaPortable/PaPortable.Android/bin
+PaPortable/PaPortable.Android/obj
+DownloadInfoTemplate.exe
+*.Designer.cs
+PaPortable/PaPortable.iOS/bin/
+PaPortable/PaPortable.iOS/obj
+PaPortable/PaPortable/bin/
+PaPortable/PaPortable/obj
