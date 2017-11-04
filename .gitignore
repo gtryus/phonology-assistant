@@ -20,3 +20,4 @@ packages/*
 *SilTools.xml
 TestResult.xml
 PaTests.VisualState.xml
+.vs/
