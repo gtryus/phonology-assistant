@@ -1,12 +1,14 @@
 ﻿@model List<LipEntry>
 <html>
 	<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="default-style" content="text/css; charset=utf-8" />
     <link rel="stylesheet" href="bootstrap.css" />
     <title>Phonlogy Assistant Portable</title>
     </head>
 <body>
     <div class="container body-content">
-        <h1>Data Corpus</h1>
+        <header><h1>Data Corpus</h1></header>
         <table class="table table-hover table-striped table-bordered">
             <thead><tr><th>Phonetic</th><th>Gloss</th><th>POS</th><th>CV Pattern</th><th>Reference</th></tr></thead>
             @foreach (var entry in @Model)

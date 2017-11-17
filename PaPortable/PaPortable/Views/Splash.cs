@@ -18,13 +18,13 @@ using System.Text;
 
 
 [System.CodeDom.Compiler.GeneratedCodeAttribute("RazorTemplatePreprocessor", "4.7.10.22")]
-public partial class DataCorpus : DataCorpusBase
+public partial class Splash : SplashBase
 {
 
 #line hidden
 
-#line 1 "DataCorpus.cshtml"
-public List<LipEntry> Model { get; set; }
+#line 1 "Splash.cshtml"
+public int Model { get; set; }
 
 #line default
 #line hidden
@@ -32,17 +32,7 @@ public List<LipEntry> Model { get; set; }
 
 public override void Execute()
 {
-WriteLiteral("<html>\r\n\t<head>\r\n    <meta");
-
-WriteLiteral(" charset=\"utf-8\"");
-
-WriteLiteral(" />\r\n    <meta");
-
-WriteLiteral(" http-equiv=\"default-style\"");
-
-WriteLiteral(" content=\"text/css; charset=utf-8\"");
-
-WriteLiteral(" />\r\n    <link");
+WriteLiteral("<html>\r\n\t<head>\r\n    <link");
 
 WriteLiteral(" rel=\"stylesheet\"");
 
@@ -53,82 +43,15 @@ WriteLiteral(" />\r\n    <title>Phonlogy Assistant Portable</title>\r\n    </hea
 
 WriteLiteral(" class=\"container body-content\"");
 
-WriteLiteral(">\r\n        <header><h1>Data Corpus</h1></header>\r\n        <table");
+WriteLiteral(">\r\n        <header><h1>Phonlogy Assistant Portable</h1></header>\r\n\t\t<img");
 
-WriteLiteral(" class=\"table table-hover table-striped table-bordered\"");
+WriteLiteral(" src=\"PA-64x64.png\"");
 
-WriteLiteral(">\r\n            <thead><tr><th>Phonetic</th><th>Gloss</th><th>POS</th><th>CV Patte" +
-"rn</th><th>Reference</th></tr></thead>\r\n");
+WriteLiteral(" class=\"img-responsive center-block\"");
 
+WriteLiteral(" alt=\"Phonology Assistant Logo\"");
 
-#line 14 "DataCorpus.cshtml"
-            
-
-#line default
-#line hidden
-
-#line 14 "DataCorpus.cshtml"
-             foreach (var entry in @Model)
-            {
-
-
-#line default
-#line hidden
-WriteLiteral("                <tr>\r\n                    <td>");
-
-
-#line 17 "DataCorpus.cshtml"
-                   Write(entry.phonetic);
-
-
-#line default
-#line hidden
-WriteLiteral("</td>\r\n                    <td>");
-
-
-#line 18 "DataCorpus.cshtml"
-                   Write(entry.gloss);
-
-
-#line default
-#line hidden
-WriteLiteral("</td>\r\n                    <td>");
-
-
-#line 19 "DataCorpus.cshtml"
-                   Write(entry.pos);
-
-
-#line default
-#line hidden
-WriteLiteral("</td>\r\n                    <td>");
-
-
-#line 20 "DataCorpus.cshtml"
-                   Write(entry.cvPat);
-
-
-#line default
-#line hidden
-WriteLiteral("</td>\r\n                    <td>");
-
-
-#line 21 "DataCorpus.cshtml"
-                   Write(entry.myRef);
-
-
-#line default
-#line hidden
-WriteLiteral("</td>\r\n                </tr>\r\n");
-
-
-#line 23 "DataCorpus.cshtml"
-            }
-
-
-#line default
-#line hidden
-WriteLiteral("        </table>\r\n    </div>\r\n    <script");
+WriteLiteral(" />\r\n    </div>\r\n    <script");
 
 WriteLiteral(" type=\"text/javascript\"");
 
@@ -148,7 +71,7 @@ WriteLiteral("></script>\r\n</body>\r\n</html>");
 // NOTE: this is the default generated helper class. You may choose to extract it to a separate file 
 // in order to customize it or share it between multiple templates, and specify the template's base 
 // class via the @inherits directive.
-public abstract class DataCorpusBase
+public abstract class SplashBase
 {
 
 		// This field is OPTIONAL, but used by the default implementation of Generate, Write, WriteAttribute and WriteLiteral

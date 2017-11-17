@@ -42,6 +42,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DataCorpus.cshtml</DependentUpon>
     </Compile>
+    <Compile Include="Views\Splash.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Splash.cshtml</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
@@ -73,6 +78,10 @@
     <None Include="Views\DataCorpus.cshtml">
       <Generator>RazorTemplatePreprocessor</Generator>
       <LastGenOutput>DataCorpus.cs</LastGenOutput>
+    </None>
+    <None Include="Views\Splash.cshtml">
+      <Generator>RazorTemplatePreprocessor</Generator>
+      <LastGenOutput>Splash.cs</LastGenOutput>
     </None>
   </ItemGroup>
   <ItemGroup>

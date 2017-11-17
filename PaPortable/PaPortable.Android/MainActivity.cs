@@ -27,8 +27,8 @@ namespace PaPortable.Droid
             // Use subclassed WebViewClient to intercept hybrid native calls
             webView.SetWebViewClient(new RazorWebViewClient(this));
 
-            var model = new Lip3Data().MyRecs;
-            var template = new DataCorpus() { Model = model };
+            var model = 3;
+            var template = new Splash() { Model = model };
             var page = template.GenerateString();
             webView.LoadDataWithBaseURL("file:///android_asset/", page, "text/html", "UTF-8", null);
         }
