@@ -1,14 +1,13 @@
-﻿using Gecko;
-using PaPortable;
-using PaPortable.Views;
-using SIL.IO;
-using System;
-using System.IO;
-using System.Reflection;
+﻿using System;
 using System.Windows.Forms;
 using System.Drawing;
+using System.IO;
+using Gecko;
+using SIL.IO;
+using PaPortable.Views;
+using System.Reflection;
 
-namespace WindowsFormsApp1
+namespace PaPortable
 {
     static class Program
     {
@@ -16,8 +15,10 @@ namespace WindowsFormsApp1
         /// The main entry point for the application.
         /// </summary>
         [STAThread]
-        static void Main(string[] args)
+        static void Main()
         {
+            Application.EnableVisualStyles();
+            Application.SetCompatibleTextRenderingDefault(false);
             Xpcom.Initialize("Firefox");
             var geckoWebBrowser = new GeckoWebBrowser { Dock = DockStyle.Fill };
             Form f = new Form { Size = new Size(750, 725) };
@@ -41,10 +42,11 @@ namespace WindowsFormsApp1
 
         private static void WriteResource(string folder, string projectLocation, string name)
         {
-            using (var str = new StreamReader(Assembly.GetExecutingAssembly().GetManifestResourceStream("WindowsFormsApp1." + projectLocation + "." + name)))
+            using (var str = new StreamReader(Assembly.GetExecutingAssembly().GetManifestResourceStream("PaPortable." + projectLocation + "." + name)))
             {
                 File.WriteAllText(Path.Combine(folder, name), str.ReadToEnd());
             }
         }
+
     }
 }

@@ -28,9 +28,5 @@ PaPortable/*/obj
 PaPortable/*/fonts
 PaPortable/*/Scripts
 PaPortable/*/Content
-*/bin/
-*/obj
-*/fonts
-*/Scripts
-*/Content
-*/Firefox
+PaPortable/*/bower*
+PaPortable/*/Firefox
