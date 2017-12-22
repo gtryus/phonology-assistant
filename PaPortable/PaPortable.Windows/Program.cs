@@ -5,6 +5,7 @@ using System.IO;
 using System.Reflection;
 using System.Collections.Generic;
 using SIL.IO;
+using PaPortable;
 using PaPortable.Views;
 using System.Drawing;
 using System.Threading;
@@ -27,10 +28,19 @@ namespace PaPortable.Windows
             Xpcom.Initialize("Firefox");
             CreateResources();
             DisplaySplash();
-            DisplayData();
+            DisplayMenu();
             foreach (var fullPath in _supportFile)
             {
                 File.Delete(fullPath);
+                var folder = Path.GetDirectoryName(fullPath);
+                try
+                {
+                    Directory.Delete(folder);
+                }
+                catch
+                {
+                    // if not empty, ignore delete directory
+                }
             }
         }
 
@@ -43,6 +53,9 @@ namespace PaPortable.Windows
             var page = template.GenerateString();
             using (var tempFile = TempFile.WithExtension("html"))
             {
+                var tempFolder = Path.GetDirectoryName(tempFile.Path);
+                var tempName = Path.GetFileName(tempFile.Path);
+                tempFile.MoveTo(Path.Combine(tempFolder, "Content", tempName));
                 File.WriteAllText(tempFile.Path, page);
                 var uri = new Uri(tempFile.Path);
                 browser.Navigate(uri.AbsoluteUri);
@@ -60,6 +73,25 @@ namespace PaPortable.Windows
             Thread.Sleep(1000);
         }
 
+        private static void DisplayMenu()
+        {
+            var f = new Form { Size = new Size(300, 500) };
+            Gecko.GeckoWebBrowser browser = new Gecko.GeckoWebBrowser { Dock = DockStyle.Fill };
+            f.Controls.Add(browser);
+            var template = new Views.MainMenu() { Model = 0 };
+            var page = template.GenerateString();
+            using (var tempFile = TempFile.WithExtension("html"))
+            {
+                var tempFolder = Path.GetDirectoryName(tempFile.Path);
+                var tempName = Path.GetFileName(tempFile.Path);
+                tempFile.MoveTo(Path.Combine(tempFolder, "Content", tempName));
+                File.WriteAllText(tempFile.Path, page);
+                var uri = new Uri(tempFile.Path);
+                browser.Navigate(uri.AbsoluteUri);
+                Application.Run(f);
+            }
+        }
+
         private static void DisplayData()
         {
             var f = new Form { Size = new Size(750, 725) };
@@ -70,6 +102,9 @@ namespace PaPortable.Windows
             var page = template.GenerateString();
             using (var tempFile = TempFile.WithExtension("html"))
             {
+                var tempFolder = Path.GetDirectoryName(tempFile.Path);
+                var tempName = Path.GetFileName(tempFile.Path);
+                tempFile.MoveTo(Path.Combine(tempFolder, "Content", tempName));
                 File.WriteAllText(tempFile.Path, page);
                 var uri = new Uri(tempFile.Path);
                 browser.Navigate(uri.AbsoluteUri);
@@ -80,17 +115,24 @@ namespace PaPortable.Windows
         private static void CreateResources()
         {
             var folder = Path.GetTempPath();
+            WriteResource(folder, "Content", "pa-StyleSheet.css");
             WriteResource(folder, "Content", "bootstrap.css");
             WriteResource(folder, "Content", "PA-64x64.png");
             WriteResource(folder, "Scripts", "bootstrap.js");
             WriteResource(folder, "Scripts", "jquery-1.9.1.js");
+            WriteResource(folder, "fonts", "glyphicons-halflings-regular.ttf");
+            // Gecko won't allow navication when loading local files. The line below is used to load the font
+            File.Copy(Path.Combine(folder, "fonts", "glyphicons-halflings-regular.ttf"), Path.Combine(folder, "Content", "glyphicons-halflings-regular.ttf"), true);
+            _supportFile.Add(Path.Combine(folder, "Content", "glyphicons-halflings-regular.ttf"));
         }
 
         private static void WriteResource(string folder, string projectLocation, string name)
         {
             using (var str = new StreamReader(Assembly.GetExecutingAssembly().GetManifestResourceStream("PaPortable." + projectLocation + "." + name)))
             {
-                var fullPath = Path.Combine(folder, name);
+                var myFolder = Path.Combine(folder, projectLocation);
+                if (!Directory.Exists(myFolder)) Directory.CreateDirectory(myFolder);
+                var fullPath = Path.Combine(myFolder, name);
                 var buffer = new byte[1000];
                 using (var os = new FileStream(fullPath, FileMode.Create, FileAccess.Write))
                 {

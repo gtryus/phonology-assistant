@@ -42,6 +42,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DataCorpus.cshtml</DependentUpon>
     </Compile>
+    <Compile Include="Views\MainMenu.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MainMenu.cshtml</DependentUpon>
+    </Compile>
     <Compile Include="Views\Splash.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -53,6 +58,7 @@
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\pa-StyleSheet.css" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
     <None Include="Content\bootstrap-theme.css.map" />
@@ -67,6 +73,10 @@
     <None Include="Views\DataCorpus.cshtml">
       <Generator>RazorTemplatePreprocessor</Generator>
       <LastGenOutput>DataCorpus.cs</LastGenOutput>
+    </None>
+    <None Include="Views\MainMenu.cshtml">
+      <Generator>RazorTemplatePreprocessor</Generator>
+      <LastGenOutput>MainMenu.cs</LastGenOutput>
     </None>
     <None Include="Views\Splash.cshtml">
       <Generator>RazorTemplatePreprocessor</Generator>

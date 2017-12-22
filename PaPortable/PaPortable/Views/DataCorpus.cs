@@ -132,13 +132,13 @@ WriteLiteral("        </table>\r\n    </div>\r\n    <script");
 
 WriteLiteral(" type=\"text/javascript\"");
 
-WriteLiteral(" src=\"jquery-1.9.1.js\"");
+WriteLiteral(" src=\"../Scripts/jquery-1.9.1.js\"");
 
 WriteLiteral("></script>\r\n    <script");
 
 WriteLiteral(" type=\"text/javascript\"");
 
-WriteLiteral(" src=\"bootstrap.js\"");
+WriteLiteral(" src=\"../Scripts/bootstrap.js\"");
 
 WriteLiteral("></script>\r\n</body>\r\n</html>");
 

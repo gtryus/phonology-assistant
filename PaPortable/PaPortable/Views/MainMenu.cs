@@ -18,12 +18,12 @@ using System.Text;
 
 
 [System.CodeDom.Compiler.GeneratedCodeAttribute("RazorTemplatePreprocessor", "4.7.10.22")]
-public partial class Splash : SplashBase
+public partial class MainMenu : MainMenuBase
 {
 
 #line hidden
 
-#line 1 "Splash.cshtml"
+#line 1 "MainMenu.cshtml"
 public int Model { get; set; }
 
 #line default
@@ -32,26 +32,123 @@ public int Model { get; set; }
 
 public override void Execute()
 {
-WriteLiteral("<html>\r\n\t<head>\r\n    <link");
+WriteLiteral("<html>\r\n<head>\r\n    <link");
 
 WriteLiteral(" rel=\"stylesheet\"");
 
 WriteLiteral(" href=\"bootstrap.css\"");
 
-WriteLiteral(" />\r\n    <title>Phonlogy Assistant Portable</title>\r\n    </head>\r\n<body>\r\n    <di" +
-"v");
+WriteLiteral(" />\r\n    <link");
+
+WriteLiteral(" rel=\"stylesheet\"");
+
+WriteLiteral(" href=\"bootstrap.css.map\"");
+
+WriteLiteral(" />\r\n    <link");
+
+WriteLiteral(" rel=\"stylesheet\"");
+
+WriteLiteral(" href=\"pa-StyleSheet.css\"");
+
+WriteLiteral(" />\r\n    <title>Phonlogy Assistant Portable</title>\r\n</head>\r\n<body>\r\n    <div");
 
 WriteLiteral(" class=\"container body-content\"");
 
-WriteLiteral(">\r\n        <header><h1>Phonlogy Assistant Portable</h1></header>\r\n\t\t<img");
+WriteLiteral(">\r\n        <header><h3");
 
-WriteLiteral(" src=\"PA-64x64.png\"");
+WriteLiteral(" style=\"text-align:center;\"");
 
-WriteLiteral(" class=\"img-responsive center-block\"");
+WriteLiteral(">Phonlogy Assistant Portable</h3></header>\r\n        <table");
 
-WriteLiteral(" alt=\"Phonology Assistant Logo\"");
+WriteLiteral(" style=\"width:100%;\"");
 
-WriteLiteral(" />\r\n    </div>\r\n    <script");
+WriteLiteral(">\r\n            <tr>\r\n                <td");
+
+WriteLiteral(" class=\"pa-menu-cell\"");
+
+WriteLiteral(">\r\n                    <button");
+
+WriteLiteral(" type=\"button\"");
+
+WriteLiteral(" class=\"btn btn-primary btn-lg pa-menu-button\"");
+
+WriteLiteral(">V</button>\r\n                </td>\r\n                <td");
+
+WriteLiteral(" class=\"pa-menu-cell\"");
+
+WriteLiteral(">\r\n                    <button");
+
+WriteLiteral(" type=\"button\"");
+
+WriteLiteral(" class=\"btn btn-primary btn-lg pa-menu-button\"");
+
+WriteLiteral(">C</button>\r\n                </td>\r\n            </tr>\r\n            <tr>\r\n        " +
+"        <td");
+
+WriteLiteral(" class=\"pa-menu-cell\"");
+
+WriteLiteral(">\r\n                    <button");
+
+WriteLiteral(" type=\"button\"");
+
+WriteLiteral(" class=\"btn btn-primary btn-lg pa-menu-button\"");
+
+WriteLiteral(">DC</button>\r\n                </td>\r\n                <td");
+
+WriteLiteral(" class=\"pa-menu-cell\"");
+
+WriteLiteral(">\r\n                    <button");
+
+WriteLiteral(" type=\"button\"");
+
+WriteLiteral(" class=\"btn btn-primary btn-lg pa-menu-button\"");
+
+WriteLiteral("><span");
+
+WriteLiteral(" class=\"glyphicon glyphicon-search\"");
+
+WriteLiteral("></span></button>\r\n                </td>\r\n            </tr>\r\n            <tr>\r\n  " +
+"              <td");
+
+WriteLiteral(" class=\"pa-menu-cell\"");
+
+WriteLiteral(">\r\n                    <button");
+
+WriteLiteral(" type=\"button\"");
+
+WriteLiteral(" class=\"btn btn-primary btn-lg pa-menu-button\"");
+
+WriteLiteral(">Proj</button>\r\n                </td>\r\n                <td");
+
+WriteLiteral(" class=\"pa-menu-cell\"");
+
+WriteLiteral(">\r\n                    <button");
+
+WriteLiteral(" type=\"button\"");
+
+WriteLiteral(" class=\"btn btn-primary btn-lg pa-menu-button\"");
+
+WriteLiteral("><span");
+
+WriteLiteral(" class=\"glyphicon glyphicon-cog\"");
+
+WriteLiteral("></span></button>\r\n                </td>\r\n            </tr>\r\n            <tr>\r\n  " +
+"              <td");
+
+WriteLiteral(" class=\"pa-menu-cell\"");
+
+WriteLiteral(">\r\n                    <button");
+
+WriteLiteral(" type=\"button\"");
+
+WriteLiteral(" class=\"btn btn-primary btn-lg pa-menu-button\"");
+
+WriteLiteral(">Dist</button>\r\n                </td>\r\n                <td");
+
+WriteLiteral(" class=\"pa-menu-cell\"");
+
+WriteLiteral(">\r\n                    <!--R4C2-->\r\n                </td>\r\n            </tr>\r\n   " +
+"     </table>\r\n    </div>\r\n    <script");
 
 WriteLiteral(" type=\"text/javascript\"");
 
@@ -71,7 +168,7 @@ WriteLiteral("></script>\r\n</body>\r\n</html>");
 // NOTE: this is the default generated helper class. You may choose to extract it to a separate file 
 // in order to customize it or share it between multiple templates, and specify the template's base 
 // class via the @inherits directive.
-public abstract class SplashBase
+public abstract class MainMenuBase
 {
 
 		// This field is OPTIONAL, but used by the default implementation of Generate, Write, WriteAttribute and WriteLiteral

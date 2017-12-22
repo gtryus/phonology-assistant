@@ -74,7 +74,7 @@
     <None Include="Content\bootstrap.min.css.map" />
     <None Include="Firefox\omni.ja" />
     <None Include="fonts\glyphicons-halflings-regular.eot" />
-    <None Include="fonts\glyphicons-halflings-regular.ttf" />
+    <EmbeddedResource Include="fonts\glyphicons-halflings-regular.ttf" />
     <None Include="fonts\glyphicons-halflings-regular.woff" />
     <None Include="fonts\glyphicons-halflings-regular.woff2" />
     <None Include="packages.config" />
@@ -98,6 +98,9 @@
     <EmbeddedResource Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <EmbeddedResource Include="Content\PA-64x64.png" />
+    <EmbeddedResource Include="..\PaPortable\Content\pa-StyleSheet.css" >
+        <Link>Content\pa-StyleSheet.css</Link>
+    </EmbeddedResource>
     <Content Include="Firefox\AccessibleMarshal.dll" />
     <Content Include="Firefox\breakpadinjector.dll" />
     <Content Include="Firefox\d3dcompiler_47.dll" />
