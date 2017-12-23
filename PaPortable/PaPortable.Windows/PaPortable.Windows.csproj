@@ -45,6 +45,7 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -58,6 +59,9 @@
   <ItemGroup>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TrappingGecko.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -98,8 +102,8 @@
     <EmbeddedResource Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <EmbeddedResource Include="Content\PA-64x64.png" />
-    <EmbeddedResource Include="..\PaPortable\Content\pa-StyleSheet.css" >
-        <Link>Content\pa-StyleSheet.css</Link>
+    <EmbeddedResource Include="..\PaPortable\Content\pa-StyleSheet.css">
+      <Link>Content\pa-StyleSheet.css</Link>
     </EmbeddedResource>
     <Content Include="Firefox\AccessibleMarshal.dll" />
     <Content Include="Firefox\breakpadinjector.dll" />

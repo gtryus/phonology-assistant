@@ -66,40 +66,40 @@ WriteLiteral(">\r\n            <tr>\r\n                <td");
 
 WriteLiteral(" class=\"pa-menu-cell\"");
 
-WriteLiteral(">\r\n                    <button");
+WriteLiteral(">\r\n                    <a");
 
-WriteLiteral(" type=\"button\"");
-
-WriteLiteral(" class=\"btn btn-primary btn-lg pa-menu-button\"");
-
-WriteLiteral(">V</button>\r\n                </td>\r\n                <td");
-
-WriteLiteral(" class=\"pa-menu-cell\"");
-
-WriteLiteral(">\r\n                    <button");
-
-WriteLiteral(" type=\"button\"");
+WriteLiteral(" href=\"hybrid:VowelChart\"");
 
 WriteLiteral(" class=\"btn btn-primary btn-lg pa-menu-button\"");
 
-WriteLiteral(">C</button>\r\n                </td>\r\n            </tr>\r\n            <tr>\r\n        " +
-"        <td");
+WriteLiteral(">V</a>\r\n                </td>\r\n                <td");
 
 WriteLiteral(" class=\"pa-menu-cell\"");
 
-WriteLiteral(">\r\n                    <button");
+WriteLiteral(">\r\n                    <a");
 
-WriteLiteral(" type=\"button\"");
+WriteLiteral(" href=\"hybrid:ConsChart\"");
 
 WriteLiteral(" class=\"btn btn-primary btn-lg pa-menu-button\"");
 
-WriteLiteral(">DC</button>\r\n                </td>\r\n                <td");
+WriteLiteral(">C</a>\r\n                </td>\r\n            </tr>\r\n            <tr>\r\n             " +
+"   <td");
 
 WriteLiteral(" class=\"pa-menu-cell\"");
 
-WriteLiteral(">\r\n                    <button");
+WriteLiteral(">\r\n                    <a");
 
-WriteLiteral(" type=\"button\"");
+WriteLiteral(" href=\"hybrid:DataCorpus\"");
+
+WriteLiteral(" class=\"btn btn-primary btn-lg pa-menu-button\"");
+
+WriteLiteral(">DC</a>\r\n                </td>\r\n                <td");
+
+WriteLiteral(" class=\"pa-menu-cell\"");
+
+WriteLiteral(">\r\n                    <a");
+
+WriteLiteral(" href=\"hybrid:Search\"");
 
 WriteLiteral(" class=\"btn btn-primary btn-lg pa-menu-button\"");
 
@@ -107,24 +107,24 @@ WriteLiteral("><span");
 
 WriteLiteral(" class=\"glyphicon glyphicon-search\"");
 
-WriteLiteral("></span></button>\r\n                </td>\r\n            </tr>\r\n            <tr>\r\n  " +
-"              <td");
+WriteLiteral("></span></a>\r\n                </td>\r\n            </tr>\r\n            <tr>\r\n       " +
+"         <td");
 
 WriteLiteral(" class=\"pa-menu-cell\"");
 
-WriteLiteral(">\r\n                    <button");
+WriteLiteral(">\r\n                    <a");
 
-WriteLiteral(" type=\"button\"");
+WriteLiteral(" href=\"hybrid:Project\"");
 
 WriteLiteral(" class=\"btn btn-primary btn-lg pa-menu-button\"");
 
-WriteLiteral(">Proj</button>\r\n                </td>\r\n                <td");
+WriteLiteral(">Proj</a>\r\n                </td>\r\n                <td");
 
 WriteLiteral(" class=\"pa-menu-cell\"");
 
-WriteLiteral(">\r\n                    <button");
+WriteLiteral(">\r\n                    <a");
 
-WriteLiteral(" type=\"button\"");
+WriteLiteral(" href=\"hybrid:Settings\"");
 
 WriteLiteral(" class=\"btn btn-primary btn-lg pa-menu-button\"");
 
@@ -132,18 +132,18 @@ WriteLiteral("><span");
 
 WriteLiteral(" class=\"glyphicon glyphicon-cog\"");
 
-WriteLiteral("></span></button>\r\n                </td>\r\n            </tr>\r\n            <tr>\r\n  " +
-"              <td");
+WriteLiteral("></span></a>\r\n                </td>\r\n            </tr>\r\n            <tr>\r\n       " +
+"         <td");
 
 WriteLiteral(" class=\"pa-menu-cell\"");
 
-WriteLiteral(">\r\n                    <button");
+WriteLiteral(">\r\n                    <a");
 
-WriteLiteral(" type=\"button\"");
+WriteLiteral(" href=\"hybrid:DistChart\"");
 
 WriteLiteral(" class=\"btn btn-primary btn-lg pa-menu-button\"");
 
-WriteLiteral(">Dist</button>\r\n                </td>\r\n                <td");
+WriteLiteral(">Dist</a>\r\n                </td>\r\n                <td");
 
 WriteLiteral(" class=\"pa-menu-cell\"");
 

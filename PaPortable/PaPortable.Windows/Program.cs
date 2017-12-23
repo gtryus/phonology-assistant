@@ -10,6 +10,7 @@ using PaPortable.Views;
 using System.Drawing;
 using System.Threading;
 using System.ComponentModel;
+using Gecko.Events;
 
 namespace PaPortable.Windows
 {
@@ -76,7 +77,7 @@ namespace PaPortable.Windows
         private static void DisplayMenu()
         {
             var f = new Form { Size = new Size(300, 500) };
-            Gecko.GeckoWebBrowser browser = new Gecko.GeckoWebBrowser { Dock = DockStyle.Fill };
+            var browser = new TrappingGecko { Dock = DockStyle.Fill };
             f.Controls.Add(browser);
             var template = new Views.MainMenu() { Model = 0 };
             var page = template.GenerateString();
@@ -92,7 +93,7 @@ namespace PaPortable.Windows
             }
         }
 
-        private static void DisplayData()
+        public static void DisplayData()
         {
             var f = new Form { Size = new Size(750, 725) };
             Gecko.GeckoWebBrowser browser = new Gecko.GeckoWebBrowser { Dock = DockStyle.Fill };
@@ -108,7 +109,7 @@ namespace PaPortable.Windows
                 File.WriteAllText(tempFile.Path, page);
                 var uri = new Uri(tempFile.Path);
                 browser.Navigate(uri.AbsoluteUri);
-                Application.Run(f);
+                f.ShowDialog();
             }
         }
 
